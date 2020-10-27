@@ -1,13 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 const db = require('./db/restaurant.json');
 
+const PORT = 4000;
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-const PORT = 4000;
+app.use(cors());
 
 app.get('/', (req, res) => {
   const randomID = Math.floor(Math.random() * 10);
