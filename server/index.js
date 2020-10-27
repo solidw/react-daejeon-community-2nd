@@ -10,10 +10,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.get('/', (req, res) => {
-  const randomID = Math.floor(Math.random() * 10);
+  const isAccidentalError = Math.floor(Math.random() * 10) < 0;
   setTimeout(() => {
-    res.json({ id: randomID, db });
-  }, 1000);
+    if (isAccidentalError) {
+      res.status(500).send('internal server error');
+    } else {
+      res.json(db);
+    }
+  }, 0);
 });
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));

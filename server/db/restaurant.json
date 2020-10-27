@@ -1,43 +1,47 @@
 {
   "data": [
     {
+      "id": 0,
       "name": "온천칼국수",
       "menu": [
-        { "food": "물총칼국수", "price": 7000 },
-        { "food": "쭈꾸미볶음", "price": 8000 },
-        { "food": "물총탕", "price": 12000 },
-        { "food": "수육", "price": 12000 },
-        { "food": "공기밥", "price": 1000 }
+        { "menuId": 0, "food": "물총칼국수", "price": 7000 },
+        { "menuId": 1, "food": "쭈꾸미볶음", "price": 8000 },
+        { "menuId": 2, "food": "물총탕", "price": 12000 },
+        { "menuId": 3, "food": "수육", "price": 12000 },
+        { "menuId": 4, "food": "공기밥", "price": 1000 }
       ]
     },
     {
+      "id": 1,
       "name": "고봉민김밥",
       "menu": [
-        { "food": "고봉민김밥", "price": 3000 },
-        { "food": "돈까스김밥", "price": 3500 },
-        { "food": "매운김밥", "price": 3500 },
-        { "food": "참치김밥", "price": 3500 },
-        { "food": "치즈김밥", "price": 3300 }
+        { "menuId": 0, "food": "고봉민김밥", "price": 3000 },
+        { "menuId": 1, "food": "돈까스김밥", "price": 3500 },
+        { "menuId": 2, "food": "매운김밥", "price": 3500 },
+        { "menuId": 3, "food": "참치김밥", "price": 3500 },
+        { "menuId": 4, "food": "치즈김밥", "price": 3300 }
       ]
     },
     {
+      "id": 2,
       "name": "태평소국밥",
       "menu": [
-        { "food": "소국밥", "price": 6500 },
-        { "food": "육사시미", "price": 8000 },
-        { "food": "소내장탕", "price": 6500 },
-        { "food": "매운소갈비찜", "price": 25000 },
-        { "food": "궁중소갈비찜", "price": 25000 }
+        { "menuId": 0, "food": "소국밥", "price": 6500 },
+        { "menuId": 1, "food": "육사시미", "price": 8000 },
+        { "menuId": 2, "food": "소내장탕", "price": 6500 },
+        { "menuId": 3, "food": "매운소갈비찜", "price": 25000 },
+        { "menuId": 4, "food": "궁중소갈비찜", "price": 25000 }
       ]
     },
     {
+      "id": 3,
       "name": "촌놈들연탄구이",
       "menu": [
-        { "food": "오돌뼈", "price": 9000 },
-        { "food": "매운닭발", "price": 13000 },
-        { "food": "꼬들살", "price": 9000 },
-        { "food": "껍데기", "price": 7000 },
-        { "food": "주먹구이", "price": 11000 }
+        { "menuId": 0, "food": "오돌뼈", "price": 9000 },
+        { "menuId": 1, "food": "매운닭발", "price": 13000 },
+        { "menuId": 2, "food": "꼬들살", "price": 9000 },
+        { "menuId": 3, "food": "껍데기", "price": 7000 },
+        { "menuId": 4, "food": "주먹구이", "price": 11000 }
       ]
     }
   ]
