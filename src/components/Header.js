@@ -1,13 +1,16 @@
 import React from 'react';
 import './Header.css';
-import logo from '../logo.svg';
+import ReactLogo from '../logo.svg';
+import GithubLogo from '../assets/Octocat.png';
 
 function Header() {
   return (
     <nav className="nav-bar">
       <div className="left">
-        <img className="logo" src={logo} alt="logo" />
-        React Daejeon Community
+        <img className="logo" src={ReactLogo} alt="logo" />
+        <p className="desc">
+          React Daejeon Community
+        </p>
       </div>
       <div className="center">
         <h1 className="title">Lunch Picker</h1>
@@ -15,7 +18,7 @@ function Header() {
       </div>
       <div className="right">
         <a href="https://github.com/solidw/react-daejeon-community-2nd" target="_blank" rel="noopener noreferrer">
-          <img className="logo" src="https://github.githubassets.com/images/modules/open_graph/github-mark.png" alt="github" />
+          <img className="logo" src={GithubLogo} alt="github" />
         </a>
       </div>
     </nav>

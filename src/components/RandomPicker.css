@@ -1,0 +1,33 @@
+.picker-div {
+  /* position: absolute;
+  right: 0; */
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pick-button {
+  background-color: #009879;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+  box-shadow: 0px 8px 24px 0px rgba(57, 57, 57, 0.1);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.toggle-button {
+  background-color: #60dafb;
+  border-radius: 8px;
+  padding: 10px;
+  color: black;
+  box-shadow: 0px 8px 24px 0px rgba(57, 57, 57, 0.1);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+}

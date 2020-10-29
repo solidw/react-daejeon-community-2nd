@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/restaurant', (req, res) => {
   const isAccidentalError = Math.floor(Math.random() * 10) < 0;
   setTimeout(() => {
     if (isAccidentalError) {

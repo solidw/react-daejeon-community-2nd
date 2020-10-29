@@ -3,6 +3,8 @@
   display: flex;
   padding: 0px 50px;
   align-items: center;
+  background: rgb(96, 218, 251);
+  background: linear-gradient(45deg, rgba(0, 152, 121, 1) 0%, rgba(96, 218, 251, 1) 100%);
 }
 
 .left {
@@ -27,7 +29,6 @@
 }
 
 .logo {
-  background: #fff;
   border-radius: 8px;
   height: 50px;
 }
@@ -39,5 +40,6 @@
 }
 
 .desc {
-  font-size: small;
+  font-size: 16px;
+  color: white;
 }
