@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## 💻 React Daejeon Community
 
 대전 지역의 React & React Native 정보 공유를 위한 오픈 커뮤니티입니다.
-자세한 정보는 [여기서](bit.ly/react-daejeon) 확인해주세요.
+자세한 정보는 [여기서](https://bit.ly/react-daejeon) 확인해주세요.
 
 ## 📄 RD & RND 두 번째 세미나
 
