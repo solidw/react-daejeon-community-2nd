@@ -6,6 +6,8 @@ import RestaurantRow from './RestaurantRow';
 import useToggle from '../hooks/useToggle';
 import Loading from './Loading';
 
+const DELAY = 2000;
+
 function RandomPicker({ data }) {
   const [pick, setPick] = useState(-1);
   const [isLoading, toggleLoading] = useToggle(false);
@@ -21,7 +23,7 @@ function RandomPicker({ data }) {
 
     timeoutId.current = setTimeout(() => {
       toggleLoading(false);
-    }, 2000);
+    }, DELAY);
   };
 
   return (
