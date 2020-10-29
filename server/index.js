@@ -10,14 +10,29 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.get('/restaurant', (req, res) => {
-  const isAccidentalError = Math.floor(Math.random() * 10) < 0;
+  const DELAY = 1000;
+  const isAccidentalError = Math.floor(Math.random() * 10) < 3;
   setTimeout(() => {
     if (isAccidentalError) {
       res.status(500).send('internal server error');
     } else {
       res.json(db);
     }
-  }, 0);
+  }, DELAY);
+});
+
+app.get('/restaurant/:restaurantId', (req, res) => {
+  const DELAY = 1000;
+  const isAccidentalError = Math.floor(Math.random() * 10) < 3;
+  const { restaurantId } = req.params;
+
+  setTimeout(() => {
+    if (isAccidentalError) {
+      res.status(500).send('internal server error');
+    } else {
+      res.json(db.data[restaurantId]);
+    }
+  }, DELAY);
 });
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
