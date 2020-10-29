@@ -1,26 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import useAsync from '../hooks/useAsync';
 import './Home.css';
 import RestaurantTable from '../components/RestaurantTable';
 import RandomPicker from '../components/RandomPicker';
-
-async function getRestaurant() {
-  const response = await axios.get('http://localhost:4000/restaurant');
-  return response.data;
-}
+import Loading from '../components/Loading';
 
 function Home() {
-  const {
-    loading, data, error,
-  } = useAsync(getRestaurant, [], false);
+  const [restaurantData, setRestaurantData] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error</div>;
-  if (!data) return <div>No data</div>;
+  useEffect(() => {
+    const fetchData = async () => {
+      const fetchedData = await axios.get('http://localhost:4000/restaurant');
+      console.log(fetchedData);
+      setRestaurantData(fetchedData.data.data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
 
-  const { data: restaurantData } = data;
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className="home-div">
