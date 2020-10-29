@@ -7,7 +7,7 @@ import useToggle from '../hooks/useToggle';
 import Loading from './Loading';
 
 function RandomPicker({ data }) {
-  const [pick, setPick] = useState(0);
+  const [pick, setPick] = useState(-1);
   const [isLoading, toggleLoading] = useToggle(false);
   const timeoutId = useRef();
 
@@ -34,14 +34,15 @@ function RandomPicker({ data }) {
           <Loading />
           <p>Loading ...</p>
         </>
-      )
-        : (
-          <table>
-            <tbody>
-              <RestaurantRow id={data[pick].id} name={data[pick].name} menu={data[pick].menu} />
-            </tbody>
-          </table>
-        )}
+      ) : pick === -1 ? (
+        <p>Press Pick Button</p>
+      ) : (
+        <table>
+          <tbody>
+            <RestaurantRow id={data[pick].id} name={data[pick].name} menu={data[pick].menu} />
+          </tbody>
+        </table>
+      )}
     </div>
   );
 }
