@@ -9,19 +9,34 @@ import Loading from '../components/Loading';
 function Home() {
   const [restaurantData, setRestaurantData] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const fetchedData = await axios.get('http://localhost:4000/restaurant');
-      console.log(fetchedData);
-      setRestaurantData(fetchedData.data.data);
-      setLoading(false);
+      try {
+        const fetchedData = await axios.get('http://localhost:4000/restaurant');
+        setRestaurantData(fetchedData.data.data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
     };
     fetchData();
   }, []);
 
   if (isLoading) {
     return <Loading />;
+  }
+
+  if (error != null) {
+    return (
+      <div>
+        error:
+        {' '}
+        {error}
+      </div>
+    );
   }
 
   return (
