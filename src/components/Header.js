@@ -15,7 +15,15 @@ function Header() {
       </div>
       <div className="center">
         <h1 className="title">Lunch Picker</h1>
-        <p className="desc">React Daejeon Community 2nd</p>
+        <a
+          href="https://forms.gle/x1j9tx5qmHVJyvYA8"
+          target="_blank"
+          rel="noopener noreferrer"
+          alt="desc"
+          className="desc"
+        >
+          React Daejeon Community 2nd
+        </a>
       </div>
       <div className="right">
         <a href="https://github.com/solidw/react-daejeon-community-2nd" target="_blank" rel="noopener noreferrer">
