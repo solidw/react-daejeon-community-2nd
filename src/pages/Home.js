@@ -18,7 +18,7 @@ function Home() {
     loading, data, error, refetch,
   } = useAsync(getRestaurant, [], false);
 
-  if (loading) return <Loading />;
+  if (loading) return <Loading center />;
 
   if (error) {
     return (

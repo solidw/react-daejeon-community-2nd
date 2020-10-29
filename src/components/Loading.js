@@ -2,9 +2,11 @@ import React from 'react';
 
 import './Loading.css';
 
-function Loading() {
+function Loading({ center = false }) {
   return (
-    <div className="loader" />
+    <div className={`${center && 'loader-box'}`}>
+      <div className="loader" />
+    </div>
   );
 }
 
