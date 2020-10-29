@@ -5,6 +5,7 @@ import useAsync from '../hooks/useAsync';
 import './Home.css';
 import RestaurantTable from '../components/RestaurantTable';
 import RandomPicker from '../components/RandomPicker';
+import Loading from '../components/Loading';
 
 async function getRestaurant() {
   const response = await axios.get('http://localhost:4000/restaurant');
@@ -16,7 +17,7 @@ function Home() {
     loading, data, error,
   } = useAsync(getRestaurant, [], false);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Loading />;
   if (error) return <div>Error</div>;
   if (!data) return <div>No data</div>;
 
