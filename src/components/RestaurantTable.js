@@ -1,4 +1,5 @@
 import React from 'react';
+
 import RestaurantRow from './RestaurantRow';
 
 function RestaurantTable({ restaurants }) {

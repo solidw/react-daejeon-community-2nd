@@ -21,5 +21,6 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     'react/prop-types': 0,
     'linebreak-style': 0,
+    'no-nested-ternary': 0,
   },
 };

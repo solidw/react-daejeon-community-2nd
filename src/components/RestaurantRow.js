@@ -1,4 +1,5 @@
 import React from 'react';
+
 import RestaurantMenu from './RestaurantMenu';
 import './RestaurantRow.css';
 
