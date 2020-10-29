@@ -7,6 +7,7 @@ function useAsync(callback, deps = [], skip = false) {
 
   const fetchData = async () => {
     setLoading(true);
+    setError(null);
     try {
       const fetchedData = await callback();
       setData(fetchedData);
